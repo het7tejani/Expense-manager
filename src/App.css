@@ -511,12 +511,70 @@ hr.suggestion-divider {
 }
 
 .chart-container {
-    margin-top: 2.5rem;
     padding: 1.5rem;
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
+
+.dashboard-charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.5rem;
+}
+
+.chart-toggle {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 1.5rem;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    overflow: hidden;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.chart-toggle .form-radio-option {
+    flex: 1;
+}
+
+.chart-toggle .form-radio-option label {
+    padding: 0.6rem 1rem;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 0;
+    height: auto;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-right: 1px solid #bdc3c7;
+    font-weight: 500;
+}
+
+.chart-toggle .form-radio-option:last-child label {
+    border-right: none;
+}
+
+.chart-toggle .form-radio-option label::before,
+.chart-toggle .form-radio-option label::after {
+    display: none;
+}
+
+.chart-toggle .form-radio-option input[type="radio"]:checked+label {
+    background-color: #34495e;
+    color: #ffffff;
+}
+
+.no-chart-data {
+    text-align: center;
+    color: #7f8c8d;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+
 
 footer {
     background-color: #161f27;
